@@ -1,0 +1,18 @@
+<div class="box">
+  <h1 class="title has-text-centered">Iniciar Sesión</h1>
+  <form id=formId (ngSubmit)="login()" #refForm="ngForm">
+    <p class="control has-icon">
+      <input class="input" type="email" placeholder="Email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required>
+      <span class="icon is-small"><i class="fa fa-envelope"></i></span>
+    </p>
+    <p class="control has-icon">
+      <input class="input" type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Password"
+        required>
+        <span class="icon is-small"><i class="fa fa-lock"></i></span>
+    </p>
+    <p class="control">
+      <button type="submit" class="button is-primary" [ngClass]="{'is-loading is-disabled':loading}"> Login </button>
+    </p>
+    <div class="notification is-danger" *ngIf="message">{{message}}</div>
+  </form>
+</div>

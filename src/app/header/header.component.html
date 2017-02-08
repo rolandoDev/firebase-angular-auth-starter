@@ -1,0 +1,26 @@
+
+<nav class="nav has-shadow" *ngIf="showNavBar">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item"  routerLink="/home">
+        <h1>LOGO</h1>
+      </a>
+      <a class="nav-item is-tab is-hidden-mobile" routerLink="/home" routerLinkActive="is-active">HOME</a>
+    </div>
+    <span class="nav-toggle" (click)="toggle($event)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div class="nav-right nav-menu" [ngClass]="{'is-active':toggled}">
+      <a class="nav-item is-tab is-hidden-tablet" routerLink="/home" routerLinkActive="is-active">HOME</a>
+      <a class="nav-item is-tab">
+        <figure class="image is-16x16" style="margin-right: 8px;">
+          <img src="http://lorempixel.com/50/50/">
+        </figure>
+        Perfil
+      </a>
+      <a class="nav-item is-tab" (click)="logout()">Cerrar Sesion</a>
+    </div>
+  </div>
+</nav>

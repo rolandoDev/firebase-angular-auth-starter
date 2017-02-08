@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body,html{
+    width:100%;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+}
+app-login {
+  height: 100%;
+  display: block;
+}
