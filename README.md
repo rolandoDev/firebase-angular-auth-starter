@@ -1,31 +1,43 @@
-# FirebaseAngularAuthStarter
+Angular Firebase Auth
+===================
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Proyecto para iniciar la Autentificación con Firebase y Angular 2 
 
-## Code scaffolding
+----------
+**Requisitos **
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+    npm install -g angular-cli 
+    #version:1.0.0-beta.28.3
+    npm install -g typings
+    npm install -g typescript
 
-## Build
+ 2. Clonar el Repositorio
+-------------------
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+    git clone https://github.com/rolandoDev/firebase-angular-auth-starter
+    
+    cd firebase-angular-auth-starter
 
-## Running unit tests
+ 3. Instalar las dependencias
+-------------------
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    npm install
 
-## Running end-to-end tests
+ 4. Configurar Firebase
+-------------
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+    app.module.ts
+    
+    export const firebaseConfig = {
+      apiKey: '<your-key>',
+      authDomain: '<your-project-authdomain>',
+      databaseURL: '<your-database-URL>',
+      storageBucket: '<your-storage-bucket>',
+      messagingSenderId: '<your-messaging-sender-id>'
+    };
 
-## Deploying to GitHub Pages
+ 5. Iniciar el Servidor
+-------------
 
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    ng serve
