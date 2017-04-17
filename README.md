@@ -2,7 +2,7 @@ Angular Firebase Auth
 ===================
 
 
-Proyecto para iniciar la Autentificación con Firebase y Angular 2 
+Proyecto para iniciar la Autentificación (Email) con Firebase y Angular v4 
 
 ----------
 **Requisitos **

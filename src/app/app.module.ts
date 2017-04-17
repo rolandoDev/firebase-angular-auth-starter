@@ -11,11 +11,11 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 export const firebaseConfig = {
-  apiKey: "AIzaSyAN7xztWAqc6SeItWKYUYLPaB-VIG3QBgs",
-  authDomain: "labs-fd4c0.firebaseapp.com",
-  databaseURL: "https://labs-fd4c0.firebaseio.com",
-  storageBucket: "labs-fd4c0.appspot.com",
-  messagingSenderId: "1062615951835"
+  apiKey: '<your-key>',
+  authDomain: '<your-project-authdomain>',
+  databaseURL: '<your-database-URL>',
+  storageBucket: '<your-storage-bucket>',
+  messagingSenderId: '<your-messaging-sender-id>'
 };
 export const firebaseAuthConfig = {
   provider: AuthProviders.Password,
