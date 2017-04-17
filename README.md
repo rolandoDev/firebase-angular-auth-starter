@@ -7,8 +7,7 @@ Proyecto para iniciar la Autentificación con Firebase y Angular 2
 ----------
 **Requisitos **
 
-    npm install -g angular-cli 
-    #version:1.0.0-beta.28.3
+    npm install -g @angular/cli
     npm install -g typings
     npm install -g typescript
 

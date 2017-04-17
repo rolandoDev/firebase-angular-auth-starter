@@ -10,24 +10,36 @@ import {GlobalEventsService} from './services/global-events.service';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-
 export const firebaseConfig = {
-  apiKey: '<your-key>',
-  authDomain: '<your-project-authdomain>',
-  databaseURL: '<your-database-URL>',
-  storageBucket: '<your-storage-bucket>',
-  messagingSenderId: '<your-messaging-sender-id>'
+  apiKey: "AIzaSyAN7xztWAqc6SeItWKYUYLPaB-VIG3QBgs",
+  authDomain: "labs-fd4c0.firebaseapp.com",
+  databaseURL: "https://labs-fd4c0.firebaseio.com",
+  storageBucket: "labs-fd4c0.appspot.com",
+  messagingSenderId: "1062615951835"
 };
 export const firebaseAuthConfig = {
   provider: AuthProviders.Password,
   method: AuthMethods.Password
 }
- 
-const appRoutes: Routes = [
- { path: 'login', component: LoginComponent},
-  { path: '',redirectTo: '/home',pathMatch: 'full'},
-   { path: 'home', component: HomeComponent, canActivate: [AuthGuardService]},
-  { path: '**', component: LoginComponent }
+
+const appRoutes: Routes = [{
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: '**',
+    component: LoginComponent
+  }
 ];
 
 
@@ -41,10 +53,11 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    AngularFireModule.initializeApp(firebaseConfig,firebaseAuthConfig),
+    AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [AuthGuardService,GlobalEventsService],
+  providers: [AuthGuardService, GlobalEventsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
+
